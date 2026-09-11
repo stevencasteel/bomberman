@@ -1,0 +1,1 @@
+{"name":"bomberman-slice","version":"0.6.0","private":true,"type":"module","scripts":{"dev":"vite --host 127.0.0.1","typecheck":"tsc --noEmit","build":"tsc --noEmit && vite build","preview":"vite preview --host 127.0.0.1"},"devDependencies":{"typescript":"7.0.2","vite":"8.2.2"}}
