@@ -39,7 +39,7 @@ Version **0.6.0**, tuning **8**, gameplay seed **1994**. All six phases/twelve c
 | Kick | 360 units/s; boss kicks 430; moving bombs reserve current/next cells |
 | Lives | 3; 0.78-second respawn beat; 1.25-second protection |
 | Minions | 6; 92–108 units/s; 45% speed initially, 75% at 4 seconds, full at 8 |
-| Rivals | 4 HP; initial capacity 2/range 3; speed 160/174; activation 4/10 seconds or early approach |
+| Rivals | 3 HP; initial capacity 2/range 3; speed 160/174; activation 4/10 seconds or early approach |
 | Rival hit | 0.68-second immunity; 0.18-second stun; 0.45-second placement lock |
 | Rival planning | 0.14-second reaction floor, 3-second horizon, 0.05-second time bins, 0.15-second escape margin |
 | Boss | 12 HP, radius 30, 0.36-second immunity; speeds 112/126/142 at HP 12–9/8–5/4–1 |
@@ -53,7 +53,7 @@ Version **0.6.0**, tuning **8**, gameplay seed **1994**. All six phases/twelve c
 
 Eight authored Stage 1 pickups: two Bomb Up, two Fire Up, two Speed Up, Heart and Remote. Pickups emerge after covering flames finish; later lethal flames destroy them. Remote affects newly placed bombs only; they have no automatic fuse but remain chain-triggerable. Powers and defeated enemies persist through a lost life. Hearts remain uncollected when they cannot heal.
 
-Rivals prioritize safety, pursuit, useful visible pickups, and crates that advance those goals. They cannot see hidden pickups. Their capacity/range/speed caps match the player, Heart heals one HP up to four, and Remote grants oldest-first manual detonation. Player has priority on a simultaneous eligible pickup; enemy ties use stable ids. Upgrades do not retroactively change already placed bombs.
+Rivals prioritize safety, pursuit, useful visible pickups, and crates that advance those goals. They cannot see hidden pickups. Their capacity/range/speed caps match the player, Heart heals one HP up to three, and Remote grants oldest-first manual detonation. Player has priority on a simultaneous eligible pickup; enemy ties use stable ids. Upgrades do not retroactively change already placed bombs.
 
 ## Presentation and bounds
 

@@ -1,1 +1,4 @@
-* { box-sizing: border-box; } html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #0b111c; } body { display: grid; place-items: center; } canvas { display: block; width: min(100vw, 100dvh); height: min(100vw, 100dvh); outline: none; touch-action: none; }
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+body { display: grid; place-items: center; background: radial-gradient(ellipse at center, #26343a 0%, #101921 62%, #090e14 100%); }
+canvas { display: block; width: min(100vw, 100dvh); height: min(100vw, 100dvh); outline: none; touch-action: none; box-shadow: 0 0 0 1px #415057, 0 24px 80px #050a0ddd; }

@@ -3,9 +3,9 @@ import { overlapsTile, sweep, type Tile } from './collision';
 import type { Bomb, Flame } from './game';
 export type Cell = { col: number; row: number; wait?: number };
 export type Rival = { capacity:number; range:number; remote:boolean; id: number; x: number; y: number; previousX: number; previousY: number; hp: number; invulnerability: number; stun: number; bombLock: number; decision: number; speed: number; facing: Direction; route: Cell[]; recent: string[]; goal: Cell | null; goalUntil: number; stall: number; deathAge: number; escapeUntil: number; wait: number; hitIds: Set<number> };
-export const RIVAL = { hp: 4, reaction: .14, stun: .18, invulnerability: .68, bombLock: .45, horizon: 3, margin: .15, goalHold: .42, stall: .5 } as const;
+export const RIVAL = { hp: 3, reaction: .14, stun: .18, invulnerability: .68, bombLock: .45, horizon: 3, margin: .15, goalHold: .42, stall: .5 } as const;
 export const key = (c: Cell) => `${c.col},${c.row}`;
-export function createRivals(): Rival[] { return [1,13].map((col,i) => ({ capacity:2,range:3,remote:false,id:i+1,x:(col+.5)*C.tile,y:72,previousX:(col+.5)*C.tile,previousY:72,hp:4,invulnerability:0,stun:0,bombLock:0,decision:0,speed:i?174:160,facing:'down',route:[],recent:[],goal:null,goalUntil:0,stall:0,deathAge:0,escapeUntil:0,wait:0,hitIds:new Set<number>() })); }
+export function createRivals(): Rival[] { return [1,13].map((col,i) => ({ capacity:2,range:3,remote:false,id:i+1,x:(col+.5)*C.tile,y:72,previousX:(col+.5)*C.tile,previousY:72,hp:RIVAL.hp,invulnerability:0,stun:0,bombLock:0,decision:0,speed:i?174:160,facing:'down',route:[],recent:[],goal:null,goalUntil:0,stall:0,deathAge:0,escapeUntil:0,wait:0,hitIds:new Set<number>() })); }
 export function occupied(b: Bomb): Cell[] {
   const cells=[{col:b.col,row:b.row}];
   if(b.direction){const [dx,dy]=DIRECTIONS[b.direction];cells.push({col:b.col+dx,row:b.row+dy});}

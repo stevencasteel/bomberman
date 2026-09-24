@@ -1,4 +1,8 @@
-## Latest user revision — September 11, 2026
+## Latest user revision — September 24, 2026
+
+Both rival bombers start with 3 HP. Heart restores one HP up to 3, and the HUD shows three HP pips. This supersedes the older 4 HP values below.
+
+## Prior user revision — September 11, 2026
 
 This revision overrides conflicting original rules below: rival bombers prioritize safe pursuit of the player, collect useful visible power-ups for themselves, and destroy crates to advance those goals. They cannot know hidden pickup locations. Bomb/Fire/Speed caps match the player; Heart restores rival HP up to 4; Remote grants oldest-first manual detonation with escape and chain-safety checks. All corner spawn pockets must provide a bomb escape around a hard-block corner, including the lower-right pocket. Respawn selection must check escape geometry as well as enemy distance. No reduced-motion support or scoring.
 

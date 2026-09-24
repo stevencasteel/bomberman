@@ -276,7 +276,7 @@ export class Game {
     }
   }
   private rivalWants(r:Rival, kind:PickupKind) {
-    return kind==='bomb'?r.capacity<4:kind==='fire'?r.range<5:kind==='speed'?r.speed<201:kind==='heart'?r.hp<4:!r.remote;
+    return kind==='bomb'?r.capacity<4:kind==='fire'?r.range<5:kind==='speed'?r.speed<201:kind==='heart'?r.hp<RIVAL.hp:!r.remote;
   }
   private updatePickups() {
     this.pickups = this.pickups.filter(pickup => {
@@ -293,7 +293,7 @@ export class Game {
         if(pickup.kind==='bomb')rival.capacity=Math.min(4,rival.capacity+1);
         if(pickup.kind==='fire')rival.range=Math.min(5,rival.range+1);
         if(pickup.kind==='speed')rival.speed=Math.min(201,rival.speed+12);
-        if(pickup.kind==='heart')rival.hp=Math.min(4,rival.hp+1);
+        if(pickup.kind==='heart')rival.hp=Math.min(RIVAL.hp,rival.hp+1);
         if(pickup.kind==='remote')rival.remote=true;
         this.emit('collect',(pickup.col+.5)*48,(pickup.row+.5)*48,['bomb','fire','speed','heart','remote'].indexOf(pickup.kind));
         this.notice=`RIVAL ${rival.id===1?'A':'B'} TOOK ${pickup.kind.toUpperCase()}`;this.noticeUntil=this.time+2;
